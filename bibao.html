@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包</title>
+</head>
+<body>
+    <ul>
+        <p>闭包的理解（函数的嵌套，可以使用外部变量但又不是真正的全局变量）</p>
+    </ul>
+    <script>
+       function create_add() {
+           var i=0;
+           function add() {
+               i++;
+               alert(i);
+           }
+           return add;
+       }
+       var add=new create_add();
+       add();
+       add();
+    </script>
+</body>
+</html>
